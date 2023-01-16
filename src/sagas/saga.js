@@ -10,6 +10,9 @@ export function* getContentsWatcher() {
 }
 
 function* getContentsHandler(data) {
+  yield put({
+    type: "GET_CONTENTS_INIT",
+  });
   const response = yield call(getContents, data.payload);
   yield put({
     type: "GET_CONTENTS_SUCCESS",

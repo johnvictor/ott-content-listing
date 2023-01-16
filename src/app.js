@@ -6,16 +6,25 @@ import createSagaMiddleware from "redux-saga";
 
 import reducer from "./store/reducer";
 import rootSaga from "./sagas/saga";
+import Header from "./components/Header";
 
 const sagaMiddleware = createSagaMiddleware();
-const store = createStore(reducer, applyMiddleware(sagaMiddleware));
+
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const store = createStore(
+  reducer,
+  composeEnhancers(applyMiddleware(sagaMiddleware))
+);
 sagaMiddleware.run(rootSaga);
 
 export default function app() {
   return (
     <div>
       <Provider store={store}>
-        <ContentList></ContentList>
+        <div className="overflow-hidden	h-screen">
+          <Header></Header>
+          <ContentList></ContentList>
+        </div>
       </Provider>
     </div>
   );
