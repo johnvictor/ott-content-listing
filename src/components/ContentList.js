@@ -36,7 +36,7 @@ export default function ContentList() {
   }, [contents, totalContentItems]);
 
   return (
-    <div className="grid grid-cols-3 gap-4 px-3 mt-8 pt-10 overflow-auto h-[calc(100vh-280px)]">
+    <div className="grid grid-cols-3 gap-4 px-3 mt-8 pt-10 overflow-auto h-[calc(100vh-100px)]">
       {filteredContents.map((c, index) => {
         if (filteredContents.length - 6 === index + 1) {
           return (
