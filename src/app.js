@@ -1,7 +1,7 @@
 import React from "react";
 import ContentList from "./components/ContentList";
 import { Provider } from "react-redux";
-import { applyMiddleware, createStore } from "redux";
+import { applyMiddleware, createStore, compose } from "redux";
 import createSagaMiddleware from "redux-saga";
 
 import reducer from "./store/reducer";
