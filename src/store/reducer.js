@@ -8,7 +8,7 @@ const reducer = (state = initialState, action) => {
         totalContentItems: action.payload.page["total-content-items"],
         contents: [
           ...state.contents,
-          action.payload.page["content-items"].content,
+          ...action.payload.page["content-items"].content,
         ],
       };
     default:

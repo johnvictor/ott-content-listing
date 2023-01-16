@@ -13,8 +13,10 @@ sagaMiddleware.run(rootSaga);
 
 export default function app() {
   return (
-    <Provider store={store}>
-      <ContentList></ContentList>
-    </Provider>
+    <div>
+      <Provider store={store}>
+        <ContentList></ContentList>
+      </Provider>
+    </div>
   );
 }
