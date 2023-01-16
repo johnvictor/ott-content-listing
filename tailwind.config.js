@@ -1,5 +1,5 @@
 module.exports = {
-  content: ["./src/**/*.{js,jsx}", "./dist/*.html"],
+  content: ["./src/**/*.{js,jsx}", "./build/*.html"],
   theme: {
     extend: {},
   },
